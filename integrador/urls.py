@@ -19,6 +19,8 @@ from src.views import *
 urlpatterns = [
 	url(r'^$', main),
 	url(r'^home/', index),
-    url(r'^logout/',sair),
+    url(r'^selecao/', selecao),
+    url(r'^classificacao/', classificacao),
+    url(r'^logout/', sair),
     url(r'^admin/', admin.site.urls),
 ]
