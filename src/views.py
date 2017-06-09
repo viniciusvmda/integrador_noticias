@@ -40,5 +40,4 @@ def classificacao(request):
 def sair(request):
 	user = get_user(request)
 	logout(request)
-	#loginForm = LoginForm(None)
 	return redirect('/')
