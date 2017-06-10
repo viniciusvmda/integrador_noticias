@@ -4,7 +4,6 @@ from django.contrib.auth import login, logout, get_user, authenticate
 from .forms import LoginForm
 from django.http import HttpResponseForbidden
 
-# Create your views here.
 def main(request):
 	if request.user.is_authenticated:
 		return redirect('/home')
@@ -25,17 +24,13 @@ def main(request):
 		loginForm = LoginForm(None)
 		return render(request,"login.html",{'loginForm' : LoginForm})
 
+
 def index(request):
 	if request.user.is_authenticated:
 		return render(request,"index.html",[])
 	else:
 		return HttpResponseForbidden()
 
-def selecao(request):
-	return render (request, "selecao.html", {})
-
-def classificacao(request):
-	return render (request, "classificacao.html", {})
 
 def sair(request):
 	user = get_user(request)

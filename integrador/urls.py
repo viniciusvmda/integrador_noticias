@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from src.views import *
+from selecionar_materias.views import *
+from classificar_materias.views import *
+
+
 urlpatterns = [
 	url(r'^$', main),
 	url(r'^home/', index),
