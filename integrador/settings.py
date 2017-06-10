@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'src'
+    'src',
+    'selecionar_materias',
+    'classificar_materias',
 ]
 
 MIDDLEWARE = [
