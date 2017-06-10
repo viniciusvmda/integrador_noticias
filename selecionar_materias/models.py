@@ -11,3 +11,8 @@ class Materia(models.Model):
 
     def __str__(self):
         return str("Título: " + str(self.titulo))
+
+class AgenciaNoticias(models.Model):
+
+    def __str__(self):
+        return str("Título: " + str(self.titulo))
