@@ -14,6 +14,8 @@ class Materia(models.Model):
         return str("Título: " + str(self.titulo))
 
 class AgenciaNoticias(models.Model):
+    titulo = models.CharField(max_length=90)
+    conteudo = models.CharField(max_length=500, null=True, blank=True)
 
     def __str__(self):
         return str("Título: " + str(self.titulo))
