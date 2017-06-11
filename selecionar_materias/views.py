@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import AgenciaNoticias, Materia
 from django.contrib import messages
 from random import randint
+from django.contrib.auth.decorators import login_required
 
 import re
 import datetime
@@ -55,6 +56,7 @@ def salvar_materia(POST_dict):
 		return False
 
 
+@login_required(login_url="/")
 def selecao(request):
 
 	materias_agencia_noticias = None
