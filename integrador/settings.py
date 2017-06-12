@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'integrador_noticias',
 		'USER': 'root',
-        'PASSWORD': '123456',
+        'PASSWORD': os.getenv('MYSQL_PASSWORD'),
         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
         'PORT': '8000',
     }
