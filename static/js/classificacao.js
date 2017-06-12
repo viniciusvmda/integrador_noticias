@@ -11,8 +11,8 @@ function associarMateria(element) {
       type: "POST",
       url: '/classificacao/',
       data: data,
-      complete: function() {
-        window.location.reload();
+      complete: function(r){
+       $("body").html(r.responseText);
       },
       dataType: 'json'
     });

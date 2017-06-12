@@ -50,4 +50,3 @@ class SelecionarMateriasTest(TestCase):
 		response = self.c.post('/selecao/',{'exportar_materias' : [''],'-materia-Teste de importacao':'Conteudo','caso_teste' : VariaveisTeste.TESTE_ERRO.value,'segunda_tentativa' : VariaveisTeste.TESTE_ERRO.value})	
 		self.assertIn('A transferência das matérias está incompleta. Serão feitas três novas tentativas de transferência. Por favor aguarde.',response.content.decode())
 		self.assertIn('A transferência não pode ser efetuada. Tente novamente mais tarde.',response.content.decode())
-		
